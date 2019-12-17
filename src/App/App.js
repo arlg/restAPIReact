@@ -19,12 +19,30 @@ let _users = JSON.parse('[{"id": 1,"nom": "DESORBAIX","prenom": "Alexandre","ser
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
-      <Tchat adrsrv={ADR_SRV}></Tchat>
+      <Router>
+        <NavBar></NavBar>
 
+        {/* Le switch de routes */}
+        <Switch>
+          <Route path="/users">
+            {/* <Users users={_users}></Users> */}
+          </Route>
+          <Route path="/tchat">
+            <Tchat adrsrv={ADR_SRV}></Tchat>
+          </Route>
+          <Route path="/user">
+            {/* <User unUser={{ nom: "DIOSSI", prenom: "Kelly", serviceId: 0 }}></User> */}
+          </Route>
+          {/* La dernière route doit être la home */}
+          <Route path="/">
+            <div className="Home">
+              Demat Breizouzh
+            </div>
+          </Route>
+        </Switch>
+
+      </Router>
       <hr />
-      <Users users={_users}></Users>
-      <User unUser={{ nom: "DIOSSI", prenom: "Kelly", serviceId: 0 }}></User>
 
     </div >
   );

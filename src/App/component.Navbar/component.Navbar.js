@@ -1,24 +1,21 @@
 import React from "react";
-import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./component.Navbar.css";
+import { Link } from "react-router-dom";
 
 function NavBar(props) {
   return (
     <div className="NavBar">
       <nav className="navbar navbar-inverse">
-        <a className="navbar-brand" href="#">Title</a>
+        <Link to='/' className="navbar-brand">Home</Link>
         <ul className="nav navbar-nav">
-          <li className="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/tchat'>Tchat</Link></li>
+          <li><Link to='/users'>Users</Link></li>
         </ul>
       </nav>
 
-    </div>
+    </div >
 
   );
 }
