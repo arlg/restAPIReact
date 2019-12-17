@@ -26,7 +26,8 @@ class TchatViewer extends Component {
     super(props);
 
     this.state = {
-      date: Moment()
+      date: Moment(),
+      messages: []
     };
   }
 
@@ -36,17 +37,7 @@ class TchatViewer extends Component {
     return (
       <div className="TchatViewer">
         Viewer
-        <Message message={
-          {
-            message: 'Hello à tous',
-            userId: 0,
-            date: '2019-12-17',
-            user: {
-              id: 0,
-              name: 'admin'
-            }
-          }
-        }></Message>
+        <Message message={this.state.messages}></Message>
       </div>
     )
   }
