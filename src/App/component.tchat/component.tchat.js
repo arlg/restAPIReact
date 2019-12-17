@@ -41,9 +41,9 @@ class Tchat extends Component {
     render = () => {
         return (
             <div className="Tchat">
-                <div class="Tchat__cols">
-                    <TchatViewer></TchatViewer>
-                    <TchatUsers></TchatUsers>
+                <div className="Tchat__cols">
+                    <TchatViewer adrsrv={this.state.props.adrsrv}></TchatViewer>
+                    <TchatUsers adrsrv={this.state.props.adrsrv}></TchatUsers>
                 </div>
 
                 <TchatSender></TchatSender>

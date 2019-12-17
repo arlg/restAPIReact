@@ -18,14 +18,14 @@ class TchatSender extends Component {
   // La fonction render genere la sortie
   render = () => {
     return (
-      <div class="TchatSender">
+      <div className="TchatSender">
 
-        <img src="#" class="img-responsive" alt="Image" />>
+        <img src="#" className="img-responsive" alt="Image" />
 
-        <div class="input-group">
-          <input type="text" name="" id="input" class="form-control" value="" required="required" />
+        <div className="input-group">
+          <input type="text" name="" id="input" className="form-control" value="" required="required" />
 
-          <button type="button" class="btn btn-large btn-block btn-primary">button</button>
+          <button type="button" className="btn btn-large btn-block btn-primary">button</button>
 
         </div>
       </div>

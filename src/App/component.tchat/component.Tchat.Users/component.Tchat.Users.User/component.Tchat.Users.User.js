@@ -16,10 +16,11 @@ class TchatUser extends Component {
   }
 
   // La fonction render genere la sortie
-  render = () => {
+  render() {
     return (
       <div className="TchatUser">
-        User
+        {console.log(this.props.user)}
+        {this.props.user.prenom} {this.props.user.name}
       </div>
     )
   }

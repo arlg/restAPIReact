@@ -13,16 +13,32 @@ class TchatUsers extends Component {
     super(props);
 
     this.state = {
-      props: props
+      props: props,
+      users: []
     };
   }
 
+  // Fetch
+  componentDidMount() {
+    fetch(this.state.props.adrsrv + '/users')
+      .then(_r => _r.json())
+      .then(r => {
+        this.setState({ users: r })
+      })
+      .catch(error => console.log(error));
+  }
+
   // La fonction render genere la sortie
-  render = () => {
+  render() {
     return (
       <div className="TchatUsers">
         <h2>Users :</h2>
-        <TchatUser></TchatUser>
+        {
+          this.state.users.map((e, i) => {
+            // return console.log(i, e);
+            return <TchatUser user={e} key={'user' + i} />
+          })
+        }
       </div>
     )
   }
