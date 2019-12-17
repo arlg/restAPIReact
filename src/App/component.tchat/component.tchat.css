@@ -1,0 +1,8 @@
+.Tchat {
+    width: 80%;
+    margin: 20px auto;
+    min-height: 100px;
+    box-shadow: 0 10px 10px #DDD;
+    padding: 10px;
+    border-radius: 2px;
+}
