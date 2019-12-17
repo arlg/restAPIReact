@@ -1,12 +1,46 @@
 .TchatViewer {
     width: 75%;
-    border: 1Px solid pink;
+    border: 1px solid pink;
     margin-right: 2.5%;
     min-height: 300px;
     padding: 20px;
+    overflow-y: auto;
+    max-height: 400px
 }
 
-.TchatViewer .viewer-message>div {
-    display: inline-block;
-    margin-bottom: 25px;
+.TchatViewer .viewer-message>div {}
+
+.TchatViewer .viewer-message {}
+
+.TchatViewer .viewer-message__top {
+    display: flex;
+}
+
+.viewer-message-user {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.TchatViewer .viewer-message-user__name {
+    display: block;
+}
+
+.TchatViewer .viewer-message-user__date {
+    font-size: 11px;
+}
+
+.viewer-message-user p {
+    margin-bottom: 0;
+}
+
+.TchatViewer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    ;
+}
+
+.TchatViewer .viewer-message-message {
+    margin-left: 60px;
 }

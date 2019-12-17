@@ -18,10 +18,10 @@ class TchatUser extends Component {
   // La fonction render genere la sortie
   render() {
     return (
-      <div className="TchatUser">
-        {console.log(this.props.user)}
+      <li className="TchatUser">
+        <img src={this.props.user.img}></img>
         {this.props.user.prenom} {this.props.user.name}
-      </div>
+      </li>
     )
   }
 }

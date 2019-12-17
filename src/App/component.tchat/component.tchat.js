@@ -46,7 +46,7 @@ class Tchat extends Component {
                     <TchatUsers adrsrv={this.state.props.adrsrv}></TchatUsers>
                 </div>
 
-                <TchatSender></TchatSender>
+                <TchatSender adrsrv={this.state.props.adrsrv}></TchatSender>
             </div>
         )
     }

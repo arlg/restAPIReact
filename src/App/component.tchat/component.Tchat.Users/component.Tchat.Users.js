@@ -33,12 +33,14 @@ class TchatUsers extends Component {
     return (
       <div className="TchatUsers">
         <h2>Users :</h2>
-        {
-          this.state.users.map((e, i) => {
-            // return console.log(i, e);
-            return <TchatUser user={e} key={'user' + i} />
-          })
-        }
+        <ul className="TchatUsers__ul">
+          {
+            this.state.users.map((e, i) => {
+              // return console.log(i, e);
+              return <TchatUser user={e} key={'user' + i} />
+            })
+          }
+        </ul>
       </div>
     )
   }

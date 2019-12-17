@@ -3,3 +3,7 @@
     border: 1px solid blue;
     padding: 15px;
 }
+
+.TchatUsers__ul {
+    padding-left: 0;
+}

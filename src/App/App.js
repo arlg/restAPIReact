@@ -3,11 +3,16 @@ import "./App.css";
 import NavBar from "./component.Navbar/component.Navbar";
 import User from "./component.User/component.User.view";
 import Users from "./component.Users/component.Users";
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
 import Tchat from "./component.tchat/component.tchat";
 
 // Adresse du serveur de données
-const ADR_SRV = 'https://my-json-server.typicode.com/champix56/restAPIReact';
+const ADR_SRV = 'http://localhost:3210';
 
 let _users = JSON.parse('[{"id": 1,"nom": "DESORBAIX","prenom": "Alexandre","serviceId": "1"},{"id": 2,"nom": "Kelly","prenom": "diossi","serviceId": "1"}]');
 
