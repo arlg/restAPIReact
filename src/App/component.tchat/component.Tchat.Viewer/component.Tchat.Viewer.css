@@ -1,0 +1,12 @@
+.TchatViewer {
+    width: 75%;
+    border: 1Px solid pink;
+    margin-right: 2.5%;
+    min-height: 300px;
+    padding: 20px;
+}
+
+.TchatViewer .viewer-message>div {
+    display: inline-block;
+    margin-bottom: 25px;
+}

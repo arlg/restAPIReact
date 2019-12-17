@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './component.tchat.css';
+import render from 'react-dom';
 
-
+import TchatSender from './component.Tchat.Sender/component.Tchat.Sender';
+import TchatViewer from './component.Tchat.Viewer/component.Tchat.Viewer';
+import TchatUsers from './component.Tchat.Users/component.Tchat.Users';
 
 /**
  * Version 1 : Fonction de chat par défaut
@@ -22,7 +25,7 @@ import './component.tchat.css';
  * Version 2 : Classe
  */
 
-class Tchat extends React.Component {
+class Tchat extends Component {
 
     // Constructeur avec les props
     // On doit appeler super avec les props
@@ -37,7 +40,14 @@ class Tchat extends React.Component {
     // La fonction render genere la sortie
     render = () => {
         return (
-            <div className="Tchat">Hello Tchat World</div>
+            <div className="Tchat">
+                <div class="Tchat__cols">
+                    <TchatViewer></TchatViewer>
+                    <TchatUsers></TchatUsers>
+                </div>
+
+                <TchatSender></TchatSender>
+            </div>
         )
     }
 }
