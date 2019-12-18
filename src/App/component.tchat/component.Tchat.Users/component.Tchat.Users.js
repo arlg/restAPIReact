@@ -23,7 +23,7 @@ class TchatUsers extends Component {
     fetch(this.state.props.adrsrv + '/users')
       .then(_r => _r.json())
       .then(r => {
-        this.setState({ users: r })
+        this.setState({ users: r });
       })
       .catch(error => console.log(error));
   }
