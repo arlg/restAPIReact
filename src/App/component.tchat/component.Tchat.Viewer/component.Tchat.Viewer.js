@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import "./component.Tchat.Viewer.css";
 import moment from "moment";
 
+import ReactModal from 'react-modal';
+
 // Message single pouir le Viewer
 function Message(props) {
   return (
@@ -40,6 +42,9 @@ class TchatViewer extends Component {
     this.state = {
       date: moment(),
       messages: [],
+      modal: {
+        isOpen: false,
+      },
       adrsrv: this.props.adrsrv
     };
   }
@@ -58,9 +63,11 @@ class TchatViewer extends Component {
           // Il faut setState pour appliquer la ressource au composant (et permettre les mises à jour)
           this.setState({ messages: jresponse })
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {
+          console.log(error);
+          this.state.modal.isOpen = true;
+        });
     }, 1000);
-
   }
 
   componentWillUnmount() {
@@ -77,6 +84,9 @@ class TchatViewer extends Component {
             return <Message message={e} key={'message-' + i}></Message>
           })
         }
+        <ReactModal isOpen={this.state.modal.isOpen}>
+          <h3 style={{ textAlign: "center" }}>Modal</h3>
+        </ReactModal>
       </div >
     )
   }
