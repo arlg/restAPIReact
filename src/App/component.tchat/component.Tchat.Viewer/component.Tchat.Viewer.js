@@ -50,11 +50,11 @@ class TchatViewer extends Component {
       let _dateTime = moment().add(-20, 'm').format('YYYY-MM-DDThh:mm:ss.000Z');
       let _dateToday = moment().add(+1, 'd').format('YYYY-MM-DDThh:mm:ss.000Z');
 
-      console.log(`${this.state.adrsrv}/publicDiscussions?_expand=user&_sort=date&date_gte=${_dateTime}&date_lte=${_dateToday}&_limit=5`);
+      // console.log(`${this.state.adrsrv}/publicDiscussions?_expand=user&_sort=date&date_gte=${_dateTime}&date_lte=${_dateToday}&_limit=5`);
       fetch(`${this.state.adrsrv}/publicDiscussions?_expand=user&_sort=date&date_gte=${_dateTime}&date_lte=${_dateToday}&_limit=5`)
         .then(_r => _r.json())
         .then(jresponse => {
-          console.log(jresponse);
+          // console.log(jresponse);
           // Il faut setState pour appliquer la ressource au composant (et permettre les mises à jour)
           this.setState({ messages: jresponse })
         })

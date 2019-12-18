@@ -13,6 +13,7 @@
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-modal": "^3.11.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0"
   },
@@ -21,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-json": "json-server -p 3210 db/db.json"
+    "start-json": "json-server -p 3210 db/db.json",
+    "start-all": "npm run start-json|npm start"
   },
   "eslintConfig": {
     "extends": "react-app"

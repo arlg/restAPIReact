@@ -41,7 +41,8 @@ class TchatUsers extends Component {
             })
           }
         </ul>
-      </div>
+        <ReactModal isOpen={true}><p>Modal</p></ReactModal>
+      </div >
     )
   }
 }
