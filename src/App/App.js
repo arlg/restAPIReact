@@ -30,8 +30,8 @@ function App() {
           <Route path="/tchat">
             <Tchat adrsrv={ADR_SRV}></Tchat>
           </Route>
-          <Route path="/user">
-            {/* <User unUser={{ nom: "DIOSSI", prenom: "Kelly", serviceId: 0 }}></User> */}
+          <Route path="/user/:id">
+            <User adrsrv={ADR_SRV}></User>
           </Route>
           {/* La dernière route doit être la home */}
           <Route path="/">

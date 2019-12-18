@@ -3,6 +3,13 @@ import React, { Component } from "react";
 // import "bootstrap/dist/css/bootstrap.css";
 import "./component.Tchat.Users.User.css";
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
+
 class TchatUser extends Component {
 
   // Constructeur avec les props
@@ -19,8 +26,10 @@ class TchatUser extends Component {
   render() {
     return (
       <li className="TchatUser">
-        <img src={this.props.user.img}></img>
-        {this.props.user.prenom} {this.props.user.name}
+        <Link to={'/user/' + this.props.user.id} target="_blank">
+          <img src={this.props.user.img}></img>
+          {this.props.user.prenom} {this.props.user.name}
+        </Link>
       </li>
     )
   }
